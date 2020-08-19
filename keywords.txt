@@ -1,0 +1,16 @@
+#######################################
+# Syntax Coloring Map For TOTP
+####################################### 
+# Datatypes (KEYWORD1)
+#######################################
+
+SPIFFS_ImageReader	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+drawBMP	KEYWORD2
+loadBMP	KEYWORD2
+bmpDimensions	KEYWORD2
+printStatus	KEYWORD2
