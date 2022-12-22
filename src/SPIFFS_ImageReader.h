@@ -16,6 +16,9 @@
 #include "SPIFFS.h"
 #include "Adafruit_SPITFT.h"
 
+// This set of guards bluntly solves an annoying compilation error when this is used alongside the Adafruit version.
+// So long as this is loaded after the Adafruit version, it won't try and define these types again.
+#ifndef __ADAFRUIT_IMAGE_READER_H__
 /** Status codes returned by drawBMP() and loadBMP() */
 enum ImageReturnCode {
   IMAGE_SUCCESS,            // Successful load (or image clipped off screen)
@@ -31,7 +34,7 @@ enum ImageFormat {
   IMAGE_8,    // GFXcanvas8 image (NOT YET SUPPORTED)
   IMAGE_16    // GFXcanvas16 image (SUPPORTED)
 };
-
+#endif
 /*!
    @brief  Data bundle returned with an image loaded to RAM. Used by
            ImageReader.loadBMP() and Image.draw(), not ImageReader.drawBMP().
